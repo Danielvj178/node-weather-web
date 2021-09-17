@@ -18,13 +18,9 @@ form.addEventListener('submit', (e) => {
             if (data.error) {
                 messageOne.textContent = '';
                 messageTwo.textContent = data.error;
-                console.log(data.error);
             } else {
                 messageOne.textContent = data.namePlace;
                 messageTwo.textContent = data.forecastData;
-                console.log(data.forecastData);
-                console.log(data.namePlace);
-                console.log(data.address);
             }
         })
     });

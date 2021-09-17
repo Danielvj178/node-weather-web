@@ -10,9 +10,9 @@ const forecast = (lat, long, callback) => {
             //console.log('There are error in API. Try again later')
             callback('There are error in API. Try again later', undefined);
         } else {
-            const { temperature, feelslike, weather_descriptions } = body.current;
+            const { temperature, feelslike, weather_descriptions, humidity } = body.current;
 
-            callback(undefined, `${weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out`);
+            callback(undefined, `${weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out. The humidity is ${humidity}`);
             //console.log(`${weather_descriptions[0]}. It is currently ${temperature} degrees out. It feels like ${feelslike} degrees out`);
         }
 
